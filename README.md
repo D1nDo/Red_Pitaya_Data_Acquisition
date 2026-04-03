@@ -25,13 +25,13 @@ These scripts allow easy visualization and analysis of the data acquired from th
 Suppose you want to use the "high-speed acquisition" (replace `rp-******` with your board's hostname):
 
 ### High-Speed Acquisition (1 MSa/s)
-1. **Downlad the Repository 
-2. **Connect your Red Pitaya StemLab 125-14 to your pc using the ethernet cable
-3. **From your PC terminal, load `Data_acquisition_MSa.bit.bin` and the `Data_acquisition_MSa.exe` on the board using Linux commands:
+1. **Downlad the Repository** 
+2. **Connect your Red Pitaya** to your PC via Ethernet.
+3. **Transfer the bitstream and executable** to the board using SCP:
 ```scp Data_acquisition_MSa.bit.bin root@rp-******.local:/root``` and ```Data_acquisition_MSa.exe root@rp-******.local:/root```
-4. **Enter on the Red Pitaya terminal digiting in your PC terminal: ```ssh root@rp-******.local```
-5. **Charge the bitstream file on the Zynq7010 SoC using: fpgautil -b Data_acquisition_MSa.bit.bin
-6. **Execute the `Data_acquisition_MSa.exe` using ```./Data_acquisition_MSa```
+4. **Access the Red Pitaya terminal** via SSH: ```ssh root@rp-******.local```
+5. **Load the bitstream** onto the Zynq-7010 SoC: fpgautil -b Data_acquisition_MSa.bit.bin
+6. **Run the executable** `Data_acquisition_MSa.exe` using ```./Data_acquisition_MSa```
 7. **Write the number of samples you want to acquire and press Enter
-8. **To scaricare the data.txt file exit from the ssh window and execute on your terminal: ```scp root@rp-******.local:/root/data.txt C:\Users\My_profile\Desktop\data.txt```
-9. **Use the Python or MATLAB scripts to plot your data acquisition.
+8.**Download the acquired data** `data.txt` to your PC: ```scp root@rp-******.local:/root/data.txt C:\Users\My_profile\Desktop\data.txt```
+9. **Plot your data acquisition** using the MATLAB or Python codes.
