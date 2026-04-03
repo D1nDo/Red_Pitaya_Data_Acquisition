@@ -35,3 +35,5 @@ Suppose you want to use the "high-speed acquisition" (replace `rp-******` with y
 7. **Write the number of samples you want to acquire and press Enter
 8.**Download the acquired data** `data.txt` to your PC: ```scp root@rp-******.local:/root/data.txt C:\Users\My_profile\Desktop\data.txt```
 9. **Plot your data acquisition** using the MATLAB or Python codes.
+
+## Contact
