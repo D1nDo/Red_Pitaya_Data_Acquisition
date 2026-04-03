@@ -24,6 +24,7 @@ These scripts allow easy visualization and analysis of the data acquired from th
 
 Suppose you want to use the "high-speed acquisition" (replace `rp-******` with your board's hostname):
 
+### High-Speed Acquisition (1 MSa/s)
 1. **Downlad the Repository 
 2. **Connect your Red Pitaya StemLab 125-14 to your pc using the ethernet cable
 3. **From your PC terminal, load `Data_acquisition_MSa.bit.bin` and the `Data_acquisition_MSa.exe` on the board using Linux commands:
