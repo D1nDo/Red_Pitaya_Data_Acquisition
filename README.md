@@ -47,4 +47,4 @@ I created this small project since, while Red Pitaya offers official tools for d
 
 This project aims to address these limitations by allowing dual-frequency acquisition: a high-rate mode at 500 kSa/s for faster signals, and a low-rate mode at 1 kSa/s for slower processes. It also supports longer acquisitions of at least 500,000 samples, thanks to the use of DMA with scatter/gather, extending the capabilities provided by the standard Red Pitaya tools.
 
-If you want to contact me please send an e-mail to : dindelli.ludovico@gmail.com
+If you have any question or aim to contact me please send an e-mail to : dindelli.ludovico@gmail.com
