@@ -28,7 +28,7 @@ Suppose you want to use the "high-speed acquisition" (replace `rp-******` with y
 1. **Downlad the Repository** 
 2. **Connect your Red Pitaya** to your PC via Ethernet.
 3. **Transfer the bitstream and executable** to the board using SCP:
-```scp Data_acquisition_MSa.bit.bin root@rp-******.local:/root``` and ```Data_acquisition_MSa.exe root@rp-******.local:/root```
+```scp Data_acquisition_500KSa.bit.bin root@rp-******.local:/root``` and ```Data_acquisition_500KSa.cpp root@rp-******.local:/root```
 4. **Access the Red Pitaya terminal** via SSH: ```ssh root@rp-******.local```
 5. **Load the bitstream** onto the Zynq-7010 SoC: fpgautil -b Data_acquisition_MSa.bit.bin
 6. **Run the executable** `Data_acquisition_MSa.exe` using ```./Data_acquisition_MSa```
