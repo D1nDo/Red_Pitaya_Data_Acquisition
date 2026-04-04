@@ -1,6 +1,6 @@
 # Red Pitaya Data Acquisition for STEMlab 125-14
 
-This repository provides all necessary files to use the **Red Pitaya STEMlab 125-14** board with OS 2.04 as a data acquisition system via its two ADC channels.  
+This repository provides all necessary files to use the **Red Pitaya STEMlab 125-14** board with Linux (tested on OS 2.04) as a data acquisition system via its two ADC channels.  
 
 The system supports two acquisition rates: **500 KSa/s** (high-speed) and **1 KSa/s** (low-speed).  
 
