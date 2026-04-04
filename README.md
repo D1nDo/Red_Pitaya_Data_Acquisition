@@ -1,6 +1,6 @@
 # Red Pitaya Data Acquisition for STEMlab 125-14
 
-This repository provides a ready-to-use data acquisition system for the Red Pitaya STEMlab 125-14 board (tested on Linux OS 2.04), utilizing both ADC channels for versatile measurements. The system can be set up and running in approximately 5 minutes, requiring minimal configuration.
+This repository provides a ready-to-use data acquisition system for the Red Pitaya STEMlab 125-14 board (tested on Linux OS 2.04), utilizing both ADC channels for versatile measurements. The system requiring minimal configuration.
 
 The system supports two acquisition rates: **500 KSa/s** (high-speed) and **1 KSa/s** (low-speed).  
 
@@ -32,15 +32,15 @@ Suppose you want to use the "high-speed acquisition" (replace `rp-******` with y
 3. **Transfer the bitstream and executable** to the board using SCP:
 ```scp Data_acquisition_500KSa.bit.bin root@rp-******.local:/root``` and ```Data_acquisition_500KSa.cpp root@rp-******.local:/root```
 4. **Access the Red Pitaya terminal** via SSH: ```ssh root@rp-******.local```
-5. **Load the bitstream** onto the Zynq-7010 SoC: fpgautil -b Data_acquisition_MSa.bit.bin
-6. **Compile the cpp code** : g++ Data_acquisition_MSa.cpp -o Data_acquisition_MSa
-7. **Run the executable** using ```./Data_acquisition_MSa```
+5. **Load the bitstream** onto the Zynq-7010 SoC: fpgautil -b Data_acquisition_500KSa.bit.bin
+6. **Compile the cpp code** : g++ Data_acquisition_500KSa.cpp -o Data_acquisition_500KSa
+7. **Run the executable** using ```./Data_acquisition_500KSa```
 8. **Insert the number of samples you want to acquire and press Enter** 
 9. **Download the acquired data** `external_data.bin` to your PC: ```scp root@rp-******.local:/tmp/external_data.bin ./```
 10. **Plot your data acquisition** using the MATLAB or Python codes.
 
 
-For the low-speed data acquisition repeat the same procedure using the 'Data_acquisition_500KSa' files.
+For the low-speed data acquisition repeat the same procedure using the 'Data_acquisition_1KSa' files.
 
 ## Motivaions
 I created this small project since, while Red Pitaya offers official tools for data acquisition, these options have some practical limitations. (For example, the built-in oscilloscope and data logger apps support only up to 16,384 samples, which can be restrictive for longer measurements or for experiments requiring different acquisition rates.
