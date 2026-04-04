@@ -43,8 +43,8 @@ Suppose you want to use the "high-speed acquisition" (replace `rp-******` with y
 For the low-speed data acquisition repeat the same procedure using the 'Data_acquisition_500KSa' files.
 
 ## Motivaions
-I developed this small project because I could not find, either online or in the official Red Pitaya resources, a data acquisition methodology that supports both multiple acquisition frequencies and longer acquisitions beyond 16,384 samples (as stated on the official documentation: https://redpitaya.readthedocs.io/en/latest/appsFeatures/introAcqGen.html).
+I created this small project since, while Red Pitaya offers official tools for data acquisition, these options have some practical limitations. (For example, the built-in oscilloscope and data logger apps support only up to 16,384 samples, which can be restrictive for longer measurements or for experiments requiring different acquisition rates.
 
-The project I provide enables two separate acquisition frequencies for different operational needs — a high-rate acquisition (500 kSa/s) and a low-rate acquisition (1 kSa/s).
+This project aims to address these limitations by allowing dual-frequency acquisition: a high-rate mode at 500 kSa/s for faster signals, and a low-rate mode at 1 kSa/s for slower processes. It also supports longer acquisitions of at least 500,000 samples, thanks to the use of DMA with scatter/gather, extending the capabilities provided by the standard Red Pitaya tools.
 
-Additionally, it allows long-duration acquisitions of at least 500,000 samples (successfully tested), significantly extending the minimum acquisition capabilities available through the official Red Pitaya channels.
+If you want to contact me please send an e-mail to : dindelli.ludovico@gmail.com
