@@ -1,0 +1,50 @@
+%% MATLAB Script for extracting 16-bit Signed channels
+clear; clc; close all;
+
+%% Make sure you are on the right repository
+nome_file = 'external_data.bin'; 
+
+% 1. Open file in binary read mode
+fid = fopen(nome_file, 'r');
+if fid == -1
+    error('Unable to open file!');
+end
+
+% Read as uint32 (32-bit unsigned) to preserve bit integrity
+dati_32bit = fread(fid, Inf, 'uint32');
+fclose(fid);
+
+num_campioni = length(dati_32bit);
+fprintf('File read successfully! Found %d samples at 32-bit.\n', num_campioni);
+
+% 2. Bit separation (Bitmasking and Shift)
+% First 16 bits (Low part)
+primi_16bit_unsigned = bitand(dati_32bit, 65535); % 65535 = 0x0000FFFF in decimal
+
+% Second 16 bits (High part)
+secondi_16bit_unsigned = bitshift(dati_32bit, -16); 
+
+% 3. Convert to SIGNED (int16)
+% This operation converts raw bits into signed values (-32768 to +32767)
+primi_16bit_signed = typecast(uint16(primi_16bit_unsigned), 'int16');
+secondi_16bit_signed = typecast(uint16(secondi_16bit_unsigned), 'int16');
+
+% 4. Plot the two separated channels
+figure('Name', 'Separated Channel Analysis (16-bit Signed)', 'NumberTitle', 'off');
+
+% --- Subplot for First 16 bits ---
+subplot(2, 1, 1);
+plot(primi_16bit_signed, 'LineWidth', 1.2, 'Color', [0.8500, 0.3250, 0.0980]);
+grid on;
+xlabel('Sample Index');
+ylabel('Amplitude (int16)');
+title('Channel 1 (First 16 bits - Low)');
+
+
+% --- Subplot for Second 16 bits ---
+subplot(2, 1, 2);
+plot(secondi_16bit_signed, 'LineWidth', 1.2, 'Color', [0.4660, 0.6740, 0.1880]);
+grid on;
+xlabel('Sample Index');
+ylabel('Amplitude (int16)');
+title('Channel 2 (Second 16 bits - High)');
