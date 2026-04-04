@@ -4,6 +4,8 @@ This repository provides all necessary files to use the **Red Pitaya STEMlab 125
 
 The system supports two acquisition rates: **500 KSa/s** (high-speed) and **1 KSa/s** (low-speed).  
 
+The system acquires data from both ADCs.
+
 ## Repository Contents
 
 - **Bitstream files** for the two acquisition modes:  
