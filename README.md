@@ -41,7 +41,8 @@ Suppose you want to use the "high-speed acquisition" (replace `rp-******` with y
 
 For the low-speed data acquisition repeat the same procedure using the `Data_acquisition_500KSa.bit.bin` file, using the same cpp code.
 
-**Technical note** : All the firmware come with an anti-aliasing Low Pass Filter with -3db at Nyquist freqeuncy.
+**Technical note** : All the firmwares come with an anti-aliasing Low Pass Filter with -3db at Nyquist freqeuncy.
+
 ## Motivaions
 I created this small project since, while Red Pitaya offers official tools for data acquisition, these options have some practical limitations. (The data logger apps support only up to 16,384 samples, which can be restrictive for longer measurements or for experiments requiring different acquisition rates).
 
