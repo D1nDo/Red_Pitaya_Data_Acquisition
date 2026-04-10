@@ -9,8 +9,8 @@ The system acquires data from both ADCs.
 ## Repository Contents
 
 - **Bitstream files** for the two acquisition modes:  
-  - `Data_acquisition_5MSa.bit.bin` – high-speed acquisition (500 KSa/s)  
-  - `Data_acquisition_500KSa.bit.bin` – low-speed acquisition (1 KSa/s)  
+  - `Data_acquisition_5MSa.bit.bin` – high-speed acquisition (5 MSa/s)  
+  - `Data_acquisition_500KSa.bit.bin` – low-speed acquisition (500 KSa/s)  
 
 - **Cpp files** for data acquisition:  
   - `Data_acquisition.cpp` 
