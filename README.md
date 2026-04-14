@@ -44,7 +44,5 @@ For the low-speed data acquisition repeat the same procedure using the `Data_acq
 **Technical note** : All the firmwares come with an anti-aliasing Low Pass Filter with -3db at Nyquist freqeuncy.
 
 ## Motivations
-I created this small project since, while Red Pitaya offers official tools for data acquisition, these options have some practical limitations. (The data logger apps support only up to 16,384 samples, which can be restrictive for longer measurements or for experiments requiring different acquisition rates).
-
-This project aims to address these limitations by allowing dual-frequency acquisition: a high-rate mode at 5 MSa/s for faster signals, and a low-rate mode at 500 kSa/s for slower processes. It also supports longer acquisitions of at least 500,000 samples, thanks to the use of DMA with scatter/gather, extending the capabilities provided by the standard Red Pitaya tools.
+I created this small project since, while Red Pitaya offers official tools for data acquisition, these options have some practical limitations. This project addresses these limitations by allowing double ADC data acquisition at two freqeuncies: a high-rate mode at 5 MSa/s for faster signals, and a low-rate mode at 500 kSa/s for slower processes. It also supports longer acquisitions of at least 500,000 samples, thanks to the use of DMA with scatter/gather, extending the capabilities provided by the standard Red Pitaya tools.
 
